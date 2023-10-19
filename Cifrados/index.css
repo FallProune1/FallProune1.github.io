@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Robotomono;
+    src: url(fuentes/RobotoMono-VariableFont_wght.ttf);
+}
+body{
+    margin: 20px;
+    padding: 0;
+    background-color: #000000;
+    font-family: Robotomono;
+    color: #fff;
+    transition: background-color 0.3s,color 0.3s; /* Agrega una transición suave */
+    
+}
+
+.bg {
+    position: fixed;
+    z-index: -5;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+  }
+  
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  }
+
+.header{
+    text-align: center;
+}
+
+
+
+.Cifrados{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.Cesar{
+    background-color: transparent;
+    padding: 15px;
+    width: 40%;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:0 0 30px #0f0f0f47;
+    transition:all 0.3s;
+    cursor: pointer;
+}
+
+.Viggenere{
+    background-color: transparent;
+    padding: 15px;
+    width: 40%;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:0 0 30px #0f0f0f47;
+    transition:all 0.3s;
+    cursor: pointer;
+}
+.viggenerem{
+    display: none;
+}
+.cesarm{
+    display: none;
+}
+.Viggenere:hover body{
+    background-color: #E21434;
+    color: #B0B0CA;
+}
+.Cesar:hover body{
+    background-color: #ffb300;
+    color: #EBE8F2;
+}
+.Viggenere:hover{
+    width: 50%;
+    height: auto;
+
+}
+.Cesar:hover{
+    width: 50%;
+    height: auto;
+}
+.Viggenere:hover .viggenerem{
+    display: block;
+}
+.Cesar:hover .cesarm{
+    display: block;
+}
+
+
+input{
+    height: 30px;
+    width: 300px;
+    background-color: #380D05;
+    border: solid #F7ECEA;
+    border-radius: 15px;
+    color: #F7ECEA;
+    
+    font-family: Robotomono;
+    padding: 10px;
+    font-size: 20px;
+}
+input:focus {
+    outline: none; 
+}
+#texto{
+    width: 500px;
+}
+
+.btnbtn-info{
+    height: 50px;
+    width: 300px;
+    background-color: #380D05;
+    border: solid #F7ECEA;
+    border-radius: 15px;
+    color: #F7ECEA;
+    font-family: Robotomono;
+    padding: 10px;
+    font-size: 20px;
+}
+

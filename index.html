@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cifrados/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+    <title>Tarea Cifrados Jetro Eliseo Jaramillo Alvarado</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <h3>Jaramillo Alvarado Jetro Eliseo 5IV7</h3>
+    <h6>La interferencia de atras son del css</h6>
+    <header class="header">
+        <h1>Elige el cifrado que deseas utilizar</h1>
+        <div class='textoac'>
+            <label for="texto">Texto que deseas cifrar:</label><br>
+            <input type="text" name="text" id="texto" class="form-control" placeholder="Ingresa el texto que deseas cifrar">
+        </div>
+    </header>
+    <br><br>
+    <section class="Cifrados">
+        <div class="Cesar">
+            <h2>Cifrado Cesar</h2>
+            <div class="cesarm">
+                <div class='row'>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="desplazamiento">Desplazamiento</label><br>
+                            <input  id="desplazamiento" name="desplazamiento" class="form-control" placeholder="Pulsa enter para cifrar">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="desplazamiento">Texto cifrado:</label><br>
+                            <input type="text" id="cifrado" name="cifrado" class="form-control" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+                <br><hr><br>
+                <div class='row'>
+                    <div class='form-group'>
+                        <label for="texto">Texto que deseas decifrar:</label><br>
+                        <input type='text' name="textd" id="textod" class="form-control">
+                    </div>
+                    <br>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="desplazamientod">Desplazamiento</label><br>
+                            <input step="1" id="desplazamientod" name="desplazamientod" class="rango" placeholder="Pulsa enter para decifrar">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-12">
+                        <div class= "form-group">
+                            <label for="desplazamiento">Texto decifrado:</label><br>
+                            <input  type="text" id="decifrado" name="decifrado" class="form-control" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Viggenere">
+            <h2>Cifrado Viggenere</h2>
+            <div class="viggenerem">
+                <article class="datos">
+                    
+                    
+                        <input type="button" class="btnbtn-info" value="Cifrar" onclick="longitudCifrar()">
+                        <br>
+                        <br>
+                        <input type="button" class="btnbtn-info" value="Descifrar" onclick="longitudDescifrar()">
+                        <br>
+                        <br>
+                        <input type="button" class="btnbtn-info" value="Reiniciar" onclick="reiniciar()">
+                        <br>
+                        <br>
+                    
+                    <br>
+                    <p><h3>Ingrese la clave secreta:</h3></p><br>
+                    <p><input type="text" name="posicionamiento" id="txtClave" onpaste="return false;" ondrop="return false;"></p><br>
+                    <p><h3>Ingrese el texto que desea cifrar:</h3></p><br>
+                    <input id="res" onpaste="return false;" ondrop="return false;"></input><br>
+                    <p><input type="button" class="btnbtn-info" value="Copiar" onclick="colocar()"></p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <script src="Cifrados/index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hoverDiv = document.querySelector(".Cesar");
+            const hoverDiv2 = document.querySelector(".Viggenere");
+            const body = document.body;
+
+            hoverDiv.addEventListener("mouseover", function() {
+                body.style.backgroundColor = "#ffb300";
+                body.style.color = "#EBE8F2"; 
+            });
+
+            hoverDiv.addEventListener("mouseout", function() {
+                body.style.backgroundColor = "#ffb300";
+                body.style.color = "#EBE8F2"; // Vuelve al color de fondo original al salir del hover
+            });
+
+            hoverDiv2.addEventListener("mouseover", function() {
+                body.style.backgroundColor = "#E21434";
+                body.style.color = "#B0B0CA"; 
+            });
+
+            hoverDiv2.addEventListener("mouseout", function() {
+                body.style.backgroundColor = "#E21434";
+                body.style.color = "#B0B0CA";  // Vuelve al color de fondo original al salir del hover
+            });
+            
+        });
+    </script>
+</body>
+</html>
